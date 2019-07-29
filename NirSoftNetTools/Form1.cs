@@ -82,5 +82,11 @@ namespace NirSoftNetTools
             string BIN = textBox8.Text;
             textBox7.Text = BINCARD.BankByBIN(BIN);
         }
+
+        private void Button6_Click(object sender, EventArgs e)
+        {
+            string Number = textBox5.Text;
+            textBox6.Text = Operator.OpNUM(Number);
+        }
     }
 }

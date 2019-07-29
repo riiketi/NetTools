@@ -58,21 +58,22 @@
             this.get_BTN = new System.Windows.Forms.Button();
             this.domainName_TB = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.button3 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.button4 = new System.Windows.Forms.Button();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.button4 = new System.Windows.Forms.Button();
             this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.button5 = new System.Windows.Forms.Button();
-            this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -287,13 +288,15 @@
             this.tabPage2.Text = "Trace Route";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // button2
             // 
-            this.textBox1.Location = new System.Drawing.Point(39, 54);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(305, 20);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "google.com";
+            this.button2.Location = new System.Drawing.Point(359, 51);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.Button2_Click);
             // 
             // textBox2
             // 
@@ -304,15 +307,13 @@
             this.textBox2.Size = new System.Drawing.Size(395, 317);
             this.textBox2.TabIndex = 1;
             // 
-            // button2
+            // textBox1
             // 
-            this.button2.Location = new System.Drawing.Point(359, 51);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.Button2_Click);
+            this.textBox1.Location = new System.Drawing.Point(39, 54);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(305, 20);
+            this.textBox1.TabIndex = 0;
+            this.textBox1.Text = "google.com";
             // 
             // tabPage3
             // 
@@ -327,6 +328,23 @@
             this.tabPage3.Text = "Vendor";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(42, 198);
+            this.textBox4.Multiline = true;
+            this.textBox4.Name = "textBox4";
+            this.textBox4.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox4.Size = new System.Drawing.Size(461, 298);
+            this.textBox4.TabIndex = 2;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(42, 92);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(221, 20);
+            this.textBox3.TabIndex = 1;
+            this.textBox3.Text = "D8-CB-8A-7C-F2-FF";
+            // 
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(278, 92);
@@ -337,25 +355,9 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.Button3_Click);
             // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(42, 92);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(221, 20);
-            this.textBox3.TabIndex = 1;
-            this.textBox3.Text = "D8-CB-8A-7C-F2-FF";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(42, 198);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox4.Size = new System.Drawing.Size(461, 298);
-            this.textBox4.TabIndex = 2;
-            // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.button6);
             this.tabPage4.Controls.Add(this.textBox6);
             this.tabPage4.Controls.Add(this.textBox5);
             this.tabPage4.Controls.Add(this.button4);
@@ -366,15 +368,14 @@
             this.tabPage4.Text = "Operator from number";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // textBox6
             // 
-            this.button4.Location = new System.Drawing.Point(322, 58);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 0;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.Button4_Click);
+            this.textBox6.Location = new System.Drawing.Point(87, 133);
+            this.textBox6.Multiline = true;
+            this.textBox6.Name = "textBox6";
+            this.textBox6.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox6.Size = new System.Drawing.Size(579, 141);
+            this.textBox6.TabIndex = 2;
             // 
             // textBox5
             // 
@@ -384,14 +385,15 @@
             this.textBox5.TabIndex = 1;
             this.textBox5.Text = "89279239211";
             // 
-            // textBox6
+            // button4
             // 
-            this.textBox6.Location = new System.Drawing.Point(87, 133);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox6.Size = new System.Drawing.Size(579, 141);
-            this.textBox6.TabIndex = 2;
+            this.button4.Location = new System.Drawing.Point(322, 58);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 0;
+            this.button4.Text = "Мобильный";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.Button4_Click);
             // 
             // tabPage5
             // 
@@ -405,15 +407,13 @@
             this.tabPage5.Text = "Bank BIN Card";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // textBox8
             // 
-            this.button5.Location = new System.Drawing.Point(418, 72);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 0;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.Button5_Click);
+            this.textBox8.Location = new System.Drawing.Point(71, 72);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(341, 20);
+            this.textBox8.TabIndex = 2;
+            this.textBox8.Text = "639002";
             // 
             // textBox7
             // 
@@ -424,13 +424,25 @@
             this.textBox7.Size = new System.Drawing.Size(422, 310);
             this.textBox7.TabIndex = 1;
             // 
-            // textBox8
+            // button5
             // 
-            this.textBox8.Location = new System.Drawing.Point(71, 72);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(341, 20);
-            this.textBox8.TabIndex = 2;
-            this.textBox8.Text = "639002";
+            this.button5.Location = new System.Drawing.Point(418, 72);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 0;
+            this.button5.Text = "button5";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.Button5_Click);
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(439, 58);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(103, 23);
+            this.button6.TabIndex = 3;
+            this.button6.Text = "Стационарный";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.Button6_Click);
             // 
             // Form1
             // 
@@ -504,6 +516,7 @@
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
     }
 }
 
