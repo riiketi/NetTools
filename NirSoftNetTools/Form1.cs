@@ -74,7 +74,7 @@ namespace NirSoftNetTools
         private void Button4_Click(object sender, EventArgs e)
         {
             string Number = textBox5.Text;
-            textBox6.Text = Operator.OpNUM(Number);
+            textBox6.Text = Operator.OpMobNUM(Number);
         }
 
         private void Button5_Click(object sender, EventArgs e)
