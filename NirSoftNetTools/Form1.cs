@@ -86,7 +86,7 @@ namespace NirSoftNetTools
         private void Button6_Click(object sender, EventArgs e)
         {
             string Number = textBox5.Text;
-            textBox6.Text = Operator.OpNUM(Number);
+            textBox6.Text = Operator.OpNUM(Number); // test
         }
     }
 }
