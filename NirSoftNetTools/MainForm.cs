@@ -22,8 +22,6 @@ namespace NirSoftNetTools
             InitializeComponent();
         }
 
-        
-        
         private void Button1_Click(object sender, EventArgs e)
         {
             
@@ -54,8 +52,6 @@ namespace NirSoftNetTools
             ListViewItem item = new ListViewItem(element);
             listView1.Items.Add(item);
             //////////////////////////////////////////////
-
-
         }
 
         private void Button2_Click(object sender, EventArgs e)
@@ -87,6 +83,11 @@ namespace NirSoftNetTools
         {
             string Number = textBox5.Text;
             textBox6.Text = Operator.OpNUM(Number); // test
+        }
+
+        private void Resolver_Button_Click(object sender, EventArgs e)
+        {
+            string data = Resolver_TextBox.Text;
         }
     }
 }

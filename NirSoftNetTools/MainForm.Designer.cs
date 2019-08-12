@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.Tab = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.button1 = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
@@ -66,6 +66,7 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.button6 = new System.Windows.Forms.Button();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
@@ -73,27 +74,31 @@
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.tabControl1.SuspendLayout();
+            this.Resolver = new System.Windows.Forms.TabPage();
+            this.Resolver_TextBox = new System.Windows.Forms.TextBox();
+            this.Resolver_Button = new System.Windows.Forms.Button();
+            this.Tab.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.tabPage5.SuspendLayout();
+            this.Resolver.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tabControl1
+            // Tab
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Controls.Add(this.tabPage5);
-            this.tabControl1.Location = new System.Drawing.Point(3, 3);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1066, 608);
-            this.tabControl1.TabIndex = 0;
+            this.Tab.Controls.Add(this.tabPage1);
+            this.Tab.Controls.Add(this.tabPage2);
+            this.Tab.Controls.Add(this.tabPage3);
+            this.Tab.Controls.Add(this.tabPage4);
+            this.Tab.Controls.Add(this.tabPage5);
+            this.Tab.Controls.Add(this.Resolver);
+            this.Tab.Location = new System.Drawing.Point(3, 3);
+            this.Tab.Name = "Tab";
+            this.Tab.SelectedIndex = 0;
+            this.Tab.Size = new System.Drawing.Size(1066, 608);
+            this.Tab.TabIndex = 0;
             // 
             // tabPage1
             // 
@@ -368,6 +373,16 @@
             this.tabPage4.Text = "Operator from number";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(439, 58);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(103, 23);
+            this.button6.TabIndex = 3;
+            this.button6.Text = "Стационарный";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.Button6_Click);
+            // 
             // textBox6
             // 
             this.textBox6.Location = new System.Drawing.Point(87, 133);
@@ -434,27 +449,46 @@
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.Button5_Click);
             // 
-            // button6
+            // Resolver
             // 
-            this.button6.Location = new System.Drawing.Point(439, 58);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(103, 23);
-            this.button6.TabIndex = 3;
-            this.button6.Text = "Стационарный";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.Button6_Click);
+            this.Resolver.Controls.Add(this.Resolver_Button);
+            this.Resolver.Controls.Add(this.Resolver_TextBox);
+            this.Resolver.Location = new System.Drawing.Point(4, 22);
+            this.Resolver.Name = "Resolver";
+            this.Resolver.Padding = new System.Windows.Forms.Padding(3);
+            this.Resolver.Size = new System.Drawing.Size(1058, 582);
+            this.Resolver.TabIndex = 5;
+            this.Resolver.Text = "Resolver";
+            this.Resolver.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // Resolver_TextBox
+            // 
+            this.Resolver_TextBox.Location = new System.Drawing.Point(6, 9);
+            this.Resolver_TextBox.Name = "Resolver_TextBox";
+            this.Resolver_TextBox.Size = new System.Drawing.Size(186, 20);
+            this.Resolver_TextBox.TabIndex = 0;
+            // 
+            // Resolver_Button
+            // 
+            this.Resolver_Button.Location = new System.Drawing.Point(198, 6);
+            this.Resolver_Button.Name = "Resolver_Button";
+            this.Resolver_Button.Size = new System.Drawing.Size(75, 23);
+            this.Resolver_Button.TabIndex = 1;
+            this.Resolver_Button.Text = "Resolve";
+            this.Resolver_Button.UseVisualStyleBackColor = true;
+            this.Resolver_Button.Click += new System.EventHandler(this.Resolver_Button_Click);
+            // 
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1071, 614);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.Tab);
             this.MaximizeBox = false;
-            this.Name = "Form1";
+            this.Name = "MainForm";
             this.Text = "Form1";
-            this.tabControl1.ResumeLayout(false);
+            this.Tab.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
@@ -465,13 +499,15 @@
             this.tabPage4.PerformLayout();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
+            this.Resolver.ResumeLayout(false);
+            this.Resolver.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl Tab;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Button get_BTN;
@@ -517,6 +553,9 @@
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.TabPage Resolver;
+        private System.Windows.Forms.Button Resolver_Button;
+        private System.Windows.Forms.TextBox Resolver_TextBox;
     }
 }
 
