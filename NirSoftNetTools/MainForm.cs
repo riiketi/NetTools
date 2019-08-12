@@ -11,13 +11,13 @@ using Division42.NetworkTools;
 
 namespace NirSoftNetTools
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
         private static string whois = "";
         private static string domain = "";
         int counter = 0;    // порядковый номер
 
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
         }
