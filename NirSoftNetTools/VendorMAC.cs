@@ -29,10 +29,8 @@ namespace NirSoftNetTools
         public static string VendMAC(string mac)
         {
             string Result = "";
-            //foreach (var mac in new string[] { "88:53:2E:67:07:BE", "FC:FB:FB:01:FA:21", "D4:F4:6F:C9:EF:8D" })
-                //Console.WriteLine(mac + "\t" + LookupMac(mac).Result);
-            Result += mac + "     " + LookupMac(mac) + "\n";
-            //Console.ReadLine();
+            //Result += mac + "     " + LookupMac(mac) + "\n";
+            Result = LookupMac(mac) + "\n";
             return Result;
         }
     }
