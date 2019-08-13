@@ -31,16 +31,47 @@ namespace NirSoftNetTools
             string s = sr.ReadToEnd();
             return s;
         }
-        public static string OpMobNUM(string Number)    // Оператор сотового номера
+        public static string OpMobNUM(string Number)    // Оператор сотового номера (возвращает только оператор)
+        {
+            string Result = "Ошибка";    // оператор
+            string Result_raw = "";
+            Result_raw += Number + "     " + LookupMobileNumber(Number) + "\n";
+            if (Result_raw.Contains("operator"))
+            {
+                int start_index = Result_raw.IndexOf(":") + 2;
+                int end_index = Result_raw.IndexOf('"', start_index);
+                int length = end_index - start_index;
+                Result = Result_raw.Substring(start_index, length);
+            }
+            return Result;
+        }
+        public static string OpMobNUM_raw(string Number)    // Оператор сотового номера (без обработки результата)
         {
             string Result = "";
             Result += Number + "     " + LookupMobileNumber(Number) + "\n";
             return Result;
         }
-        public static string OpNUM(string Number)   // Оператор стационарного номера
+        public static string OpNUM(string Number)   // Оператор стационарного номера (возвращает только оператор)
         {
-            string Result = "";
-            Result += Number + "     " + LookupNotMobileNumber(Number) + "\n";
+            string Result = "";    // оператор
+            string Result_raw = "";
+            Result_raw += Number + "     " + LookupNotMobileNumber(Number) + "\n";
+            
+            if (Result_raw.Contains("operator"))
+            {
+                int ind = Result_raw.IndexOf("operator");
+                int start_index = Result_raw.IndexOf(">", ind) + 1;
+                int end_index = Result_raw.IndexOf('<', start_index);
+                int length = end_index - start_index;
+                Result = Result_raw.Substring(start_index, length);
+            }
+            return Result;
+        }
+        public static string[] OpNUM_raw(string Number)   // Оператор стационарного номера (без обработки результата)
+        {
+            string[] Result = new string[2];
+            string Result1 = "";
+            Result1 += Number + "     " + LookupNotMobileNumber(Number) + "\n";
             return Result;
         }
     }
