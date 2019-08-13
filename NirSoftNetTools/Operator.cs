@@ -53,7 +53,7 @@ namespace NirSoftNetTools
         }
         public static string OpNUM(string Number)   // Оператор стационарного номера (возвращает только оператор)
         {
-            string Result = "";    // оператор
+            string Result = "Ошибка";    // оператор
             string Result_raw = "";
             Result_raw += Number + "     " + LookupNotMobileNumber(Number) + "\n";
             
