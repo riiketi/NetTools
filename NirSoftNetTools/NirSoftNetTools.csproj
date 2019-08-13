@@ -55,7 +55,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BINCARD.cs" />
-    <Compile Include="Class1.cs" />
     <Compile Include="Operator.cs" />
     <Compile Include="VendorMAC.cs" />
     <Compile Include="TraceRoute.cs" />
