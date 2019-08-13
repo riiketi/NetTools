@@ -75,8 +75,12 @@ namespace NirSoftNetTools
 
         private void Button5_Click(object sender, EventArgs e)
         {
+            textBox7.Clear();
             string BIN = textBox8.Text;
-            textBox7.Text = BINCARD.BankByBIN(BIN);
+            string[] res = BINCARD.BankByBIN(BIN);
+            textBox7.Text += "Платёжная система: " + res[0] + Environment.NewLine;
+            textBox7.Text += "Страна: " + res[1] + Environment.NewLine;
+            textBox7.Text += "Банк: " + res[2] + Environment.NewLine;
         }
 
         private void Button6_Click(object sender, EventArgs e)
