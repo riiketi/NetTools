@@ -22,7 +22,7 @@ namespace NirSoftNetTools
 
         public static KeyValuePair<string, IPAddress> IPToDomain(string IP)
         {
-            IPHostEntry IpToDomainName = Dns.GetHostEntry("173.194.38.138");
+            IPHostEntry IpToDomainName = Dns.GetHostEntry(IP);
             string hostname = IpToDomainName.HostName;
             return new KeyValuePair<string, IPAddress>(hostname, IPAddress.Parse(IP));
         }
