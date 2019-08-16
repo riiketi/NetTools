@@ -75,8 +75,8 @@
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
             this.Resolver = new System.Windows.Forms.TabPage();
-            this.Resolver_TextBox = new System.Windows.Forms.TextBox();
             this.Resolver_Button = new System.Windows.Forms.Button();
+            this.Resolver_TextBox = new System.Windows.Forms.TextBox();
             this.Tab.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -318,7 +318,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(305, 20);
             this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "google.com";
             // 
             // tabPage3
             // 
@@ -461,13 +460,6 @@
             this.Resolver.Text = "Resolver";
             this.Resolver.UseVisualStyleBackColor = true;
             // 
-            // Resolver_TextBox
-            // 
-            this.Resolver_TextBox.Location = new System.Drawing.Point(6, 9);
-            this.Resolver_TextBox.Name = "Resolver_TextBox";
-            this.Resolver_TextBox.Size = new System.Drawing.Size(186, 20);
-            this.Resolver_TextBox.TabIndex = 0;
-            // 
             // Resolver_Button
             // 
             this.Resolver_Button.Location = new System.Drawing.Point(198, 6);
@@ -477,6 +469,13 @@
             this.Resolver_Button.Text = "Resolve";
             this.Resolver_Button.UseVisualStyleBackColor = true;
             this.Resolver_Button.Click += new System.EventHandler(this.Resolver_Button_Click);
+            // 
+            // Resolver_TextBox
+            // 
+            this.Resolver_TextBox.Location = new System.Drawing.Point(6, 9);
+            this.Resolver_TextBox.Name = "Resolver_TextBox";
+            this.Resolver_TextBox.Size = new System.Drawing.Size(186, 20);
+            this.Resolver_TextBox.TabIndex = 0;
             // 
             // MainForm
             // 
