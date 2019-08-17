@@ -10,21 +10,27 @@ namespace NirSoftNetTools
 {
     static class Resolver
     {
-        public static List<KeyValuePair<string, IPAddress>> DomainToIP(string hostname)
+        public static IPAddress[] DomainToIP(string hostname)
         {
-            var list = new List<KeyValuePair<string, IPAddress>>();
-            IPAddress[] IPAddrList = Dns.GetHostAddresses(hostname);
-            foreach (var ip in IPAddrList) 
-                list.Add(new KeyValuePair<string, IPAddress>(hostname, ip));
-
-            return list;
+            return Dns.GetHostAddresses(hostname);
         }
 
-        public static KeyValuePair<string, IPAddress> IPToDomain(string IP)
+        public static string IPToDomain(string IP)
         {
-            IPHostEntry IpToDomainName = Dns.GetHostEntry(IP);
-            string hostname = IpToDomainName.HostName;
-            return new KeyValuePair<string, IPAddress>(hostname, IPAddress.Parse(IP));
+            return Dns.GetHostEntry(IP).HostName;
+        }
+
+        public static string IPToDomain(IPAddress IP)
+        {
+            try
+            {
+                return Dns.GetHostEntry(IP).HostName;
+            }
+            catch (Exception e)
+            {
+                return string.Empty;
+            }
         }
     }
+
 }

@@ -60,7 +60,7 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.TraceRoute_Button = new System.Windows.Forms.Button();
             this.TraceRoute_TextBox = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TR_InputTextBox = new System.Windows.Forms.TextBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -77,6 +77,11 @@
             this.Resolver = new System.Windows.Forms.TabPage();
             this.Resolver_Button = new System.Windows.Forms.Button();
             this.Resolver_TextBox = new System.Windows.Forms.TextBox();
+            this.TR_ListView = new System.Windows.Forms.ListView();
+            this.columnHeader22 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader23 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader24 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader25 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Tab.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -151,7 +156,7 @@
             this.columnHeader19,
             this.columnHeader20,
             this.columnHeader21});
-            this.listView1.Location = new System.Drawing.Point(6, 35);
+            this.listView1.Location = new System.Drawing.Point(6, 39);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(1046, 365);
             this.listView1.TabIndex = 5;
@@ -282,9 +287,10 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.TR_ListView);
             this.tabPage2.Controls.Add(this.TraceRoute_Button);
             this.tabPage2.Controls.Add(this.TraceRoute_TextBox);
-            this.tabPage2.Controls.Add(this.textBox1);
+            this.tabPage2.Controls.Add(this.TR_InputTextBox);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -295,9 +301,9 @@
             // 
             // TraceRoute_Button
             // 
-            this.TraceRoute_Button.Location = new System.Drawing.Point(359, 51);
+            this.TraceRoute_Button.Location = new System.Drawing.Point(314, 6);
             this.TraceRoute_Button.Name = "TraceRoute_Button";
-            this.TraceRoute_Button.Size = new System.Drawing.Size(75, 23);
+            this.TraceRoute_Button.Size = new System.Drawing.Size(171, 23);
             this.TraceRoute_Button.TabIndex = 2;
             this.TraceRoute_Button.Text = "TraceRoute";
             this.TraceRoute_Button.UseVisualStyleBackColor = true;
@@ -305,19 +311,19 @@
             // 
             // TraceRoute_TextBox
             // 
-            this.TraceRoute_TextBox.Location = new System.Drawing.Point(39, 95);
+            this.TraceRoute_TextBox.Location = new System.Drawing.Point(17, 457);
             this.TraceRoute_TextBox.Multiline = true;
             this.TraceRoute_TextBox.Name = "TraceRoute_TextBox";
             this.TraceRoute_TextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.TraceRoute_TextBox.Size = new System.Drawing.Size(395, 317);
+            this.TraceRoute_TextBox.Size = new System.Drawing.Size(219, 125);
             this.TraceRoute_TextBox.TabIndex = 1;
             // 
-            // textBox1
+            // TR_InputTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(39, 54);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(305, 20);
-            this.textBox1.TabIndex = 0;
+            this.TR_InputTextBox.Location = new System.Drawing.Point(3, 6);
+            this.TR_InputTextBox.Name = "TR_InputTextBox";
+            this.TR_InputTextBox.Size = new System.Drawing.Size(305, 20);
+            this.TR_InputTextBox.TabIndex = 0;
             // 
             // tabPage3
             // 
@@ -477,6 +483,39 @@
             this.Resolver_TextBox.Size = new System.Drawing.Size(186, 20);
             this.Resolver_TextBox.TabIndex = 0;
             // 
+            // TR_ListView
+            // 
+            this.TR_ListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader22,
+            this.columnHeader23,
+            this.columnHeader24,
+            this.columnHeader25});
+            this.TR_ListView.Location = new System.Drawing.Point(3, 35);
+            this.TR_ListView.Name = "TR_ListView";
+            this.TR_ListView.Size = new System.Drawing.Size(663, 320);
+            this.TR_ListView.TabIndex = 3;
+            this.TR_ListView.UseCompatibleStateImageBehavior = false;
+            this.TR_ListView.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader22
+            // 
+            this.columnHeader22.Text = "№";
+            this.columnHeader22.Width = 31;
+            // 
+            // columnHeader23
+            // 
+            this.columnHeader23.Text = "EllapsedTime";
+            // 
+            // columnHeader24
+            // 
+            this.columnHeader24.Text = "IP";
+            this.columnHeader24.Width = 211;
+            // 
+            // columnHeader25
+            // 
+            this.columnHeader25.Text = "Host Name";
+            this.columnHeader25.Width = 357;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -538,7 +577,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button TraceRoute_Button;
         private System.Windows.Forms.TextBox TraceRoute_TextBox;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TR_InputTextBox;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox3;
@@ -555,6 +594,11 @@
         private System.Windows.Forms.TabPage Resolver;
         private System.Windows.Forms.Button Resolver_Button;
         private System.Windows.Forms.TextBox Resolver_TextBox;
+        private System.Windows.Forms.ListView TR_ListView;
+        private System.Windows.Forms.ColumnHeader columnHeader22;
+        private System.Windows.Forms.ColumnHeader columnHeader23;
+        private System.Windows.Forms.ColumnHeader columnHeader24;
+        private System.Windows.Forms.ColumnHeader columnHeader25;
     }
 }
 

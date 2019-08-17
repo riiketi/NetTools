@@ -57,34 +57,22 @@ namespace NirSoftNetTools
                 PingReply reply = pinger.Send(hostname, timeout, buffer, options);
                 stopWatch.Stop();
 
-                IPHostEntry entry = Dns.GetHostEntry(reply.Address);
-
                 switch (reply.Status)
                 {
                     case IPStatus.TtlExpired:
-                        yield return new RouteInfo(stopWatch.ElapsedMilliseconds, reply.Address, entry.HostName);
+                        yield return new RouteInfo(stopWatch.ElapsedMilliseconds, reply.Address, Resolver.IPToDomain(reply.Address));
                         continue;
 
                     case IPStatus.TimedOut:
                         continue;
 
                     case IPStatus.Success:
-                        yield return new RouteInfo(stopWatch.ElapsedMilliseconds, reply.Address, entry.HostName);
+                        yield return new RouteInfo(stopWatch.ElapsedMilliseconds, reply.Address, Resolver.IPToDomain(reply.Address));
                         break;
                 }
 
                 break;
             }
-        }
-
-        public static string Traceroute(string hostname)
-        {
-            string result = string.Empty;
-            int counter = 1;
-            foreach (var route in GetTraceRoute(hostname))
-                result += string.Format("{0}\t{1} ms\t{2}\r\n", counter++, route.ElapsedTime, route.Domain, route.IP);
-
-            return result;
         }
     }
 }

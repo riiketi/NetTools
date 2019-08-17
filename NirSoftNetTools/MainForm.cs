@@ -56,9 +56,16 @@ namespace NirSoftNetTools
 
         private void TraceRoute_Button_Click(object sender, EventArgs e)
         {
-            string hostname = textBox1.Text;
-            string Result = TraceRoute.Traceroute(hostname);
-            TraceRoute_TextBox.Text = Result;
+            string[] buffer = new string[TR_ListView.Columns.Count];
+            int counter = 1;
+            foreach (var info in TraceRoute.GetTraceRoute(TR_InputTextBox.Text))
+            {
+                buffer[0] = counter++.ToString();
+                buffer[1] = info.ElapsedTime.ToString();
+                buffer[2] = info.IP.ToString();
+                buffer[3] = info.Domain.ToString();
+                TR_ListView.Items.Add(new ListViewItem(buffer));
+            }
         }
 
         private void Button3_Click(object sender, EventArgs e)
