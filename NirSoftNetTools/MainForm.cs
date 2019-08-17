@@ -54,11 +54,11 @@ namespace NirSoftNetTools
             //////////////////////////////////////////////
         }
 
-        private void Button2_Click(object sender, EventArgs e)
+        private void TraceRoute_Button_Click(object sender, EventArgs e)
         {
             string hostname = textBox1.Text;
             string Result = TraceRoute.Traceroute(hostname);
-            textBox2.Text = Result;
+            TraceRoute_TextBox.Text = Result;
         }
 
         private void Button3_Click(object sender, EventArgs e)

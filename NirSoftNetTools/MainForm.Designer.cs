@@ -58,8 +58,8 @@
             this.get_BTN = new System.Windows.Forms.Button();
             this.domainName_TB = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.TraceRoute_Button = new System.Windows.Forms.Button();
+            this.TraceRoute_TextBox = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -282,8 +282,8 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.button2);
-            this.tabPage2.Controls.Add(this.textBox2);
+            this.tabPage2.Controls.Add(this.TraceRoute_Button);
+            this.tabPage2.Controls.Add(this.TraceRoute_TextBox);
             this.tabPage2.Controls.Add(this.textBox1);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
@@ -293,24 +293,24 @@
             this.tabPage2.Text = "Trace Route";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // TraceRoute_Button
             // 
-            this.button2.Location = new System.Drawing.Point(359, 51);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.Button2_Click);
+            this.TraceRoute_Button.Location = new System.Drawing.Point(359, 51);
+            this.TraceRoute_Button.Name = "TraceRoute_Button";
+            this.TraceRoute_Button.Size = new System.Drawing.Size(75, 23);
+            this.TraceRoute_Button.TabIndex = 2;
+            this.TraceRoute_Button.Text = "TraceRoute";
+            this.TraceRoute_Button.UseVisualStyleBackColor = true;
+            this.TraceRoute_Button.Click += new System.EventHandler(this.TraceRoute_Button_Click);
             // 
-            // textBox2
+            // TraceRoute_TextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(39, 95);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox2.Size = new System.Drawing.Size(395, 317);
-            this.textBox2.TabIndex = 1;
+            this.TraceRoute_TextBox.Location = new System.Drawing.Point(39, 95);
+            this.TraceRoute_TextBox.Multiline = true;
+            this.TraceRoute_TextBox.Name = "TraceRoute_TextBox";
+            this.TraceRoute_TextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.TraceRoute_TextBox.Size = new System.Drawing.Size(395, 317);
+            this.TraceRoute_TextBox.TabIndex = 1;
             // 
             // textBox1
             // 
@@ -536,8 +536,8 @@
         private System.Windows.Forms.ColumnHeader columnHeader20;
         private System.Windows.Forms.ColumnHeader columnHeader21;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button TraceRoute_Button;
+        private System.Windows.Forms.TextBox TraceRoute_TextBox;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TextBox textBox4;
