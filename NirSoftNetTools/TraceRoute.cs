@@ -42,7 +42,7 @@ namespace NirSoftNetTools
         public static IEnumerable<RouteInfo> GetTraceRoute(string hostname)
         {
             const int timeout = 10000;
-            const int maxTTL = 128;
+            const int maxTTL = 30;
             const int bufferSize = 32;
 
             byte[] buffer = new byte[bufferSize];
