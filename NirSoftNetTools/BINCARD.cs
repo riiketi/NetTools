@@ -14,8 +14,7 @@ namespace NirSoftNetTools
     {
         private static string LookupNumber(string BIN)
         {
-            WebRequest req =
-            WebRequest.Create("https://lookup.binlist.net/" + BIN);
+            WebRequest req = WebRequest.Create("https://lookup.binlist.net/" + BIN);
             WebResponse resp = req.GetResponse();
             Stream stream = resp.GetResponseStream();
             StreamReader sr = new StreamReader(stream);

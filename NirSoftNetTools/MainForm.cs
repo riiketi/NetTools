@@ -32,26 +32,10 @@ namespace NirSoftNetTools
 
         }
 
-        private void Button1_Click_1(object sender, EventArgs e) 
+        private void Button1_Click_1(object sender, EventArgs e)
         {
-            domain = domainName_TB.Text;    // Доменное имя введённое в текстбокс
-            string whoisResult = WhoisService.WhoIs(domain);
-            result_TB.Text = whoisResult;
-
-
-            // Добавляем элемент в таблицу////////////////
-            string[] element = new string[21];
-
-            element[0] = counter.ToString();    // Индекс
-            element[1] = System.Net.Dns.GetHostEntry(domain).AddressList[0].ToString(); // IP адрес
-            if (domain == "") // Статус
-                element[2] = "Unexpected error occured!";
-            else
-                element[2] = "Succeed";
-
-            ListViewItem item = new ListViewItem(element);
-            listView1.Items.Add(item);
-            //////////////////////////////////////////////
+            WhoisResult_TextBox.Clear();
+            WhoisResult_TextBox.Text = WhoisService.WhoIs(domainName_TextBox.Text);
         }
 
         private void TraceRoute_Button_Click(object sender, EventArgs e)

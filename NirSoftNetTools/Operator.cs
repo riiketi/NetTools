@@ -13,8 +13,7 @@ namespace NirSoftNetTools
     {
         private static string LookupMobileNumber(string Number)
         {
-            WebRequest req =
-            WebRequest.Create("http://www.megafon.ru/api/mfn/info?msisdn=" + Number);
+            WebRequest req = WebRequest.Create("http://www.megafon.ru/api/mfn/info?msisdn=" + Number);
             WebResponse resp = req.GetResponse();
             Stream stream = resp.GetResponseStream();
             StreamReader sr = new StreamReader(stream);
@@ -23,8 +22,7 @@ namespace NirSoftNetTools
         }
         private static string LookupNotMobileNumber(string Number)  // 8 (код города) (номер)
         {
-            WebRequest req =
-            WebRequest.Create("https://www.kody.su/api/v2.1/search.xml?q=" + Number + "&key=90c8df3e97273dca8800f89261d3538e");
+            WebRequest req = WebRequest.Create("https://www.kody.su/api/v2.1/search.xml?q=" + Number + "&key=90c8df3e97273dca8800f89261d3538e");
             WebResponse resp = req.GetResponse();
             Stream stream = resp.GetResponseStream();
             StreamReader sr = new StreamReader(stream);

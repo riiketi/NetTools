@@ -30,34 +30,16 @@
         {
             this.Tab = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader16 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader17 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader18 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader19 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader20 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader21 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Whois_button = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.result_TB = new System.Windows.Forms.RichTextBox();
-            this.get_BTN = new System.Windows.Forms.Button();
-            this.domainName_TB = new System.Windows.Forms.TextBox();
+            this.WhoisResult_TextBox = new System.Windows.Forms.RichTextBox();
+            this.domainName_TextBox = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.TR_ListView = new System.Windows.Forms.ListView();
+            this.columnHeader22 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader23 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader24 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader25 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.TraceRoute_Button = new System.Windows.Forms.Button();
             this.TraceRoute_TextBox = new System.Windows.Forms.TextBox();
             this.TR_InputTextBox = new System.Windows.Forms.TextBox();
@@ -77,11 +59,6 @@
             this.Resolver = new System.Windows.Forms.TabPage();
             this.Resolver_Button = new System.Windows.Forms.Button();
             this.Resolver_TextBox = new System.Windows.Forms.TextBox();
-            this.TR_ListView = new System.Windows.Forms.ListView();
-            this.columnHeader22 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader23 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader24 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader25 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Tab.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -107,12 +84,10 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.button1);
-            this.tabPage1.Controls.Add(this.listView1);
+            this.tabPage1.Controls.Add(this.Whois_button);
             this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Controls.Add(this.result_TB);
-            this.tabPage1.Controls.Add(this.get_BTN);
-            this.tabPage1.Controls.Add(this.domainName_TB);
+            this.tabPage1.Controls.Add(this.WhoisResult_TextBox);
+            this.tabPage1.Controls.Add(this.domainName_TextBox);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -122,133 +97,15 @@
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.TabPage1_Click);
             // 
-            // button1
+            // Whois_button
             // 
-            this.button1.Location = new System.Drawing.Point(718, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 21);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Добавить";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.Button1_Click_1);
-            // 
-            // listView1
-            // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4,
-            this.columnHeader5,
-            this.columnHeader6,
-            this.columnHeader7,
-            this.columnHeader8,
-            this.columnHeader9,
-            this.columnHeader10,
-            this.columnHeader11,
-            this.columnHeader12,
-            this.columnHeader13,
-            this.columnHeader14,
-            this.columnHeader15,
-            this.columnHeader16,
-            this.columnHeader17,
-            this.columnHeader18,
-            this.columnHeader19,
-            this.columnHeader20,
-            this.columnHeader21});
-            this.listView1.Location = new System.Drawing.Point(6, 39);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(1046, 365);
-            this.listView1.TabIndex = 5;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "#";
-            this.columnHeader1.Width = 29;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "IP Address";
-            this.columnHeader2.Width = 66;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Status";
-            this.columnHeader3.Width = 48;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Country";
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "Network Name";
-            // 
-            // columnHeader6
-            // 
-            this.columnHeader6.Text = "Owner Name";
-            // 
-            // columnHeader7
-            // 
-            this.columnHeader7.Text = "From IP";
-            // 
-            // columnHeader8
-            // 
-            this.columnHeader8.Text = "To IP";
-            // 
-            // columnHeader9
-            // 
-            this.columnHeader9.Text = "CIDR";
-            // 
-            // columnHeader10
-            // 
-            this.columnHeader10.Text = "Allocated";
-            // 
-            // columnHeader11
-            // 
-            this.columnHeader11.Text = "Contact Name";
-            // 
-            // columnHeader12
-            // 
-            this.columnHeader12.Text = "Address";
-            // 
-            // columnHeader13
-            // 
-            this.columnHeader13.Text = "Postal Code";
-            // 
-            // columnHeader14
-            // 
-            this.columnHeader14.Text = "Email";
-            // 
-            // columnHeader15
-            // 
-            this.columnHeader15.Text = "Abuse Email";
-            // 
-            // columnHeader16
-            // 
-            this.columnHeader16.Text = "Abuse Contact";
-            // 
-            // columnHeader17
-            // 
-            this.columnHeader17.Text = "Phone";
-            // 
-            // columnHeader18
-            // 
-            this.columnHeader18.Text = "Fax";
-            // 
-            // columnHeader19
-            // 
-            this.columnHeader19.Text = "Whois Source";
-            // 
-            // columnHeader20
-            // 
-            this.columnHeader20.Text = "Host Name";
-            // 
-            // columnHeader21
-            // 
-            this.columnHeader21.Text = "Resolved Name";
+            this.Whois_button.Location = new System.Drawing.Point(642, 6);
+            this.Whois_button.Name = "Whois_button";
+            this.Whois_button.Size = new System.Drawing.Size(75, 21);
+            this.Whois_button.TabIndex = 6;
+            this.Whois_button.Text = "Добавить";
+            this.Whois_button.UseVisualStyleBackColor = true;
+            this.Whois_button.Click += new System.EventHandler(this.Button1_Click_1);
             // 
             // label1
             // 
@@ -259,31 +116,21 @@
             this.label1.Text = "Данный инструмент, позволет извлекать и просматривать актуальную информацию о вла" +
     "дельцах IP-адресов, сетей и автономных систем.";
             // 
-            // result_TB
+            // WhoisResult_TextBox
             // 
-            this.result_TB.Location = new System.Drawing.Point(6, 410);
-            this.result_TB.Name = "result_TB";
-            this.result_TB.Size = new System.Drawing.Size(1046, 166);
-            this.result_TB.TabIndex = 3;
-            this.result_TB.Text = "";
+            this.WhoisResult_TextBox.Location = new System.Drawing.Point(5, 35);
+            this.WhoisResult_TextBox.Name = "WhoisResult_TextBox";
+            this.WhoisResult_TextBox.Size = new System.Drawing.Size(1046, 541);
+            this.WhoisResult_TextBox.TabIndex = 3;
+            this.WhoisResult_TextBox.Text = "";
             // 
-            // get_BTN
+            // domainName_TextBox
             // 
-            this.get_BTN.Location = new System.Drawing.Point(947, 5);
-            this.get_BTN.Name = "get_BTN";
-            this.get_BTN.Size = new System.Drawing.Size(105, 21);
-            this.get_BTN.TabIndex = 2;
-            this.get_BTN.Text = "Добавить";
-            this.get_BTN.UseVisualStyleBackColor = true;
-            this.get_BTN.Click += new System.EventHandler(this.Button1_Click);
-            // 
-            // domainName_TB
-            // 
-            this.domainName_TB.Location = new System.Drawing.Point(384, 6);
-            this.domainName_TB.Name = "domainName_TB";
-            this.domainName_TB.Size = new System.Drawing.Size(252, 20);
-            this.domainName_TB.TabIndex = 0;
-            this.domainName_TB.Text = "google.com";
+            this.domainName_TextBox.Location = new System.Drawing.Point(384, 6);
+            this.domainName_TextBox.Name = "domainName_TextBox";
+            this.domainName_TextBox.Size = new System.Drawing.Size(252, 20);
+            this.domainName_TextBox.TabIndex = 0;
+            this.domainName_TextBox.Text = "google.com";
             // 
             // tabPage2
             // 
@@ -298,6 +145,39 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Trace Route";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // TR_ListView
+            // 
+            this.TR_ListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader22,
+            this.columnHeader23,
+            this.columnHeader24,
+            this.columnHeader25});
+            this.TR_ListView.Location = new System.Drawing.Point(3, 35);
+            this.TR_ListView.Name = "TR_ListView";
+            this.TR_ListView.Size = new System.Drawing.Size(663, 320);
+            this.TR_ListView.TabIndex = 3;
+            this.TR_ListView.UseCompatibleStateImageBehavior = false;
+            this.TR_ListView.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader22
+            // 
+            this.columnHeader22.Text = "№";
+            this.columnHeader22.Width = 31;
+            // 
+            // columnHeader23
+            // 
+            this.columnHeader23.Text = "EllapsedTime";
+            // 
+            // columnHeader24
+            // 
+            this.columnHeader24.Text = "IP";
+            this.columnHeader24.Width = 211;
+            // 
+            // columnHeader25
+            // 
+            this.columnHeader25.Text = "Host Name";
+            this.columnHeader25.Width = 357;
             // 
             // TraceRoute_Button
             // 
@@ -483,39 +363,6 @@
             this.Resolver_TextBox.Size = new System.Drawing.Size(186, 20);
             this.Resolver_TextBox.TabIndex = 0;
             // 
-            // TR_ListView
-            // 
-            this.TR_ListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader22,
-            this.columnHeader23,
-            this.columnHeader24,
-            this.columnHeader25});
-            this.TR_ListView.Location = new System.Drawing.Point(3, 35);
-            this.TR_ListView.Name = "TR_ListView";
-            this.TR_ListView.Size = new System.Drawing.Size(663, 320);
-            this.TR_ListView.TabIndex = 3;
-            this.TR_ListView.UseCompatibleStateImageBehavior = false;
-            this.TR_ListView.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader22
-            // 
-            this.columnHeader22.Text = "№";
-            this.columnHeader22.Width = 31;
-            // 
-            // columnHeader23
-            // 
-            this.columnHeader23.Text = "EllapsedTime";
-            // 
-            // columnHeader24
-            // 
-            this.columnHeader24.Text = "IP";
-            this.columnHeader24.Width = 211;
-            // 
-            // columnHeader25
-            // 
-            this.columnHeader25.Text = "Host Name";
-            this.columnHeader25.Width = 357;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -548,33 +395,10 @@
         private System.Windows.Forms.TabControl Tab;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.Button get_BTN;
-        private System.Windows.Forms.TextBox domainName_TB;
-        private System.Windows.Forms.RichTextBox result_TB;
+        private System.Windows.Forms.TextBox domainName_TextBox;
+        private System.Windows.Forms.RichTextBox WhoisResult_TextBox;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.ColumnHeader columnHeader5;
-        private System.Windows.Forms.ColumnHeader columnHeader6;
-        private System.Windows.Forms.ColumnHeader columnHeader7;
-        private System.Windows.Forms.ColumnHeader columnHeader8;
-        private System.Windows.Forms.ColumnHeader columnHeader9;
-        private System.Windows.Forms.ColumnHeader columnHeader10;
-        private System.Windows.Forms.ColumnHeader columnHeader11;
-        private System.Windows.Forms.ColumnHeader columnHeader12;
-        private System.Windows.Forms.ColumnHeader columnHeader13;
-        private System.Windows.Forms.ColumnHeader columnHeader14;
-        private System.Windows.Forms.ColumnHeader columnHeader15;
-        private System.Windows.Forms.ColumnHeader columnHeader16;
-        private System.Windows.Forms.ColumnHeader columnHeader17;
-        private System.Windows.Forms.ColumnHeader columnHeader18;
-        private System.Windows.Forms.ColumnHeader columnHeader19;
-        private System.Windows.Forms.ColumnHeader columnHeader20;
-        private System.Windows.Forms.ColumnHeader columnHeader21;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Whois_button;
         private System.Windows.Forms.Button TraceRoute_Button;
         private System.Windows.Forms.TextBox TraceRoute_TextBox;
         private System.Windows.Forms.TextBox TR_InputTextBox;
