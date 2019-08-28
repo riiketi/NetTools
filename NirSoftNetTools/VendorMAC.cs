@@ -13,10 +13,6 @@ namespace NirSoftNetTools
     {
         private static string LookupMac(string MacAddress)
         {
-            //var uri = new Uri("http://api.macvendors.com/" + WebUtility.UrlEncode(MacAddress));
-            //using (var wc = new HttpClient())
-                //return wc.GetStringAsync(uri);
-
             WebRequest req =  
             WebRequest.Create("http://api.macvendors.com/" + MacAddress);
             WebResponse resp = req.GetResponse();
@@ -29,7 +25,6 @@ namespace NirSoftNetTools
         public static string VendMAC(string mac)
         {
             string Result = "";
-            //Result += mac + "     " + LookupMac(mac) + "\n";
             Result = LookupMac(mac) + "\n";
             return Result;
         }

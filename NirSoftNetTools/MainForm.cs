@@ -13,9 +13,6 @@ namespace NirSoftNetTools
 {
     public partial class MainForm : Form
     {
-        private static string whois = "";
-        private static string domain = "";
-        int counter = 0;    // порядковый номер
 
         public MainForm()
         {
