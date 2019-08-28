@@ -84,5 +84,11 @@ namespace NirSoftNetTools
         {
             string data = Resolver_TextBox.Text;
         }
+
+        private void IMEI_button_Click(object sender, EventArgs e)
+        {
+            string IMEI = IMEI_input_tb.Text;
+            IMEI_output_tb.Text = VendorIMEI.LookupIMEI(IMEI);
+        }
     }
 }

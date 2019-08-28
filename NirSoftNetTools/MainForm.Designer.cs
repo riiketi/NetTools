@@ -59,6 +59,10 @@
             this.Resolver = new System.Windows.Forms.TabPage();
             this.Resolver_Button = new System.Windows.Forms.Button();
             this.Resolver_TextBox = new System.Windows.Forms.TextBox();
+            this.Imei_Tab = new System.Windows.Forms.TabPage();
+            this.IMEI_button = new System.Windows.Forms.Button();
+            this.IMEI_input_tb = new System.Windows.Forms.TextBox();
+            this.IMEI_output_tb = new System.Windows.Forms.TextBox();
             this.Tab.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -66,6 +70,7 @@
             this.tabPage4.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.Resolver.SuspendLayout();
+            this.Imei_Tab.SuspendLayout();
             this.SuspendLayout();
             // 
             // Tab
@@ -76,6 +81,7 @@
             this.Tab.Controls.Add(this.tabPage4);
             this.Tab.Controls.Add(this.tabPage5);
             this.Tab.Controls.Add(this.Resolver);
+            this.Tab.Controls.Add(this.Imei_Tab);
             this.Tab.Location = new System.Drawing.Point(3, 3);
             this.Tab.Name = "Tab";
             this.Tab.SelectedIndex = 0;
@@ -155,7 +161,7 @@
             this.columnHeader25});
             this.TR_ListView.Location = new System.Drawing.Point(3, 35);
             this.TR_ListView.Name = "TR_ListView";
-            this.TR_ListView.Size = new System.Drawing.Size(663, 320);
+            this.TR_ListView.Size = new System.Drawing.Size(663, 541);
             this.TR_ListView.TabIndex = 3;
             this.TR_ListView.UseCompatibleStateImageBehavior = false;
             this.TR_ListView.View = System.Windows.Forms.View.Details;
@@ -181,9 +187,9 @@
             // 
             // TraceRoute_Button
             // 
-            this.TraceRoute_Button.Location = new System.Drawing.Point(314, 6);
+            this.TraceRoute_Button.Location = new System.Drawing.Point(672, 6);
             this.TraceRoute_Button.Name = "TraceRoute_Button";
-            this.TraceRoute_Button.Size = new System.Drawing.Size(171, 23);
+            this.TraceRoute_Button.Size = new System.Drawing.Size(380, 23);
             this.TraceRoute_Button.TabIndex = 2;
             this.TraceRoute_Button.Text = "TraceRoute";
             this.TraceRoute_Button.UseVisualStyleBackColor = true;
@@ -191,18 +197,18 @@
             // 
             // TraceRoute_TextBox
             // 
-            this.TraceRoute_TextBox.Location = new System.Drawing.Point(17, 457);
+            this.TraceRoute_TextBox.Location = new System.Drawing.Point(672, 35);
             this.TraceRoute_TextBox.Multiline = true;
             this.TraceRoute_TextBox.Name = "TraceRoute_TextBox";
             this.TraceRoute_TextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.TraceRoute_TextBox.Size = new System.Drawing.Size(219, 125);
+            this.TraceRoute_TextBox.Size = new System.Drawing.Size(380, 541);
             this.TraceRoute_TextBox.TabIndex = 1;
             // 
             // TR_InputTextBox
             // 
             this.TR_InputTextBox.Location = new System.Drawing.Point(3, 6);
             this.TR_InputTextBox.Name = "TR_InputTextBox";
-            this.TR_InputTextBox.Size = new System.Drawing.Size(305, 20);
+            this.TR_InputTextBox.Size = new System.Drawing.Size(663, 20);
             this.TR_InputTextBox.TabIndex = 0;
             // 
             // tabPage3
@@ -215,29 +221,29 @@
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.Size = new System.Drawing.Size(1058, 582);
             this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Vendor";
+            this.tabPage3.Text = "MAC";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(42, 198);
+            this.textBox4.Location = new System.Drawing.Point(6, 32);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
             this.textBox4.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox4.Size = new System.Drawing.Size(461, 298);
+            this.textBox4.Size = new System.Drawing.Size(1046, 544);
             this.textBox4.TabIndex = 2;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(42, 92);
+            this.textBox3.Location = new System.Drawing.Point(6, 6);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(221, 20);
+            this.textBox3.Size = new System.Drawing.Size(965, 20);
             this.textBox3.TabIndex = 1;
             this.textBox3.Text = "D8-CB-8A-7C-F2-FF";
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(278, 92);
+            this.button3.Location = new System.Drawing.Point(977, 6);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 0;
@@ -260,9 +266,9 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(439, 58);
+            this.button6.Location = new System.Drawing.Point(895, 3);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(103, 23);
+            this.button6.Size = new System.Drawing.Size(157, 23);
             this.button6.TabIndex = 3;
             this.button6.Text = "Стационарный";
             this.button6.UseVisualStyleBackColor = true;
@@ -270,26 +276,26 @@
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(87, 133);
+            this.textBox6.Location = new System.Drawing.Point(5, 32);
             this.textBox6.Multiline = true;
             this.textBox6.Name = "textBox6";
             this.textBox6.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox6.Size = new System.Drawing.Size(579, 141);
+            this.textBox6.Size = new System.Drawing.Size(1047, 545);
             this.textBox6.TabIndex = 2;
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(87, 58);
+            this.textBox5.Location = new System.Drawing.Point(5, 6);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(156, 20);
+            this.textBox5.Size = new System.Drawing.Size(747, 20);
             this.textBox5.TabIndex = 1;
             this.textBox5.Text = "89279239211";
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(322, 58);
+            this.button4.Location = new System.Drawing.Point(758, 3);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.Size = new System.Drawing.Size(131, 23);
             this.button4.TabIndex = 0;
             this.button4.Text = "Мобильный";
             this.button4.UseVisualStyleBackColor = true;
@@ -309,28 +315,28 @@
             // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(71, 72);
+            this.textBox8.Location = new System.Drawing.Point(5, 12);
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(341, 20);
+            this.textBox8.Size = new System.Drawing.Size(966, 20);
             this.textBox8.TabIndex = 2;
             this.textBox8.Text = "639002";
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(71, 107);
+            this.textBox7.Location = new System.Drawing.Point(5, 38);
             this.textBox7.Multiline = true;
             this.textBox7.Name = "textBox7";
             this.textBox7.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox7.Size = new System.Drawing.Size(422, 310);
+            this.textBox7.Size = new System.Drawing.Size(1047, 539);
             this.textBox7.TabIndex = 1;
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(418, 72);
+            this.button5.Location = new System.Drawing.Point(977, 12);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 23);
             this.button5.TabIndex = 0;
-            this.button5.Text = "button5";
+            this.button5.Text = "Пуск";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.Button5_Click);
             // 
@@ -363,6 +369,46 @@
             this.Resolver_TextBox.Size = new System.Drawing.Size(186, 20);
             this.Resolver_TextBox.TabIndex = 0;
             // 
+            // Imei_Tab
+            // 
+            this.Imei_Tab.Controls.Add(this.IMEI_output_tb);
+            this.Imei_Tab.Controls.Add(this.IMEI_input_tb);
+            this.Imei_Tab.Controls.Add(this.IMEI_button);
+            this.Imei_Tab.Location = new System.Drawing.Point(4, 22);
+            this.Imei_Tab.Name = "Imei_Tab";
+            this.Imei_Tab.Padding = new System.Windows.Forms.Padding(3);
+            this.Imei_Tab.Size = new System.Drawing.Size(1058, 582);
+            this.Imei_Tab.TabIndex = 6;
+            this.Imei_Tab.Text = "IMEI";
+            this.Imei_Tab.UseVisualStyleBackColor = true;
+            // 
+            // IMEI_button
+            // 
+            this.IMEI_button.Location = new System.Drawing.Point(864, 6);
+            this.IMEI_button.Name = "IMEI_button";
+            this.IMEI_button.Size = new System.Drawing.Size(188, 23);
+            this.IMEI_button.TabIndex = 0;
+            this.IMEI_button.Text = "Пуск";
+            this.IMEI_button.UseVisualStyleBackColor = true;
+            this.IMEI_button.Click += new System.EventHandler(this.IMEI_button_Click);
+            // 
+            // IMEI_input_tb
+            // 
+            this.IMEI_input_tb.Location = new System.Drawing.Point(6, 6);
+            this.IMEI_input_tb.Name = "IMEI_input_tb";
+            this.IMEI_input_tb.Size = new System.Drawing.Size(852, 20);
+            this.IMEI_input_tb.TabIndex = 1;
+            this.IMEI_input_tb.Text = "354869047125463";
+            // 
+            // IMEI_output_tb
+            // 
+            this.IMEI_output_tb.Location = new System.Drawing.Point(3, 32);
+            this.IMEI_output_tb.Multiline = true;
+            this.IMEI_output_tb.Name = "IMEI_output_tb";
+            this.IMEI_output_tb.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.IMEI_output_tb.Size = new System.Drawing.Size(1049, 544);
+            this.IMEI_output_tb.TabIndex = 2;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -386,6 +432,8 @@
             this.tabPage5.PerformLayout();
             this.Resolver.ResumeLayout(false);
             this.Resolver.PerformLayout();
+            this.Imei_Tab.ResumeLayout(false);
+            this.Imei_Tab.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -423,6 +471,10 @@
         private System.Windows.Forms.ColumnHeader columnHeader23;
         private System.Windows.Forms.ColumnHeader columnHeader24;
         private System.Windows.Forms.ColumnHeader columnHeader25;
+        private System.Windows.Forms.TabPage Imei_Tab;
+        private System.Windows.Forms.TextBox IMEI_output_tb;
+        private System.Windows.Forms.TextBox IMEI_input_tb;
+        private System.Windows.Forms.Button IMEI_button;
     }
 }
 
