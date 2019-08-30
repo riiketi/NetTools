@@ -60,9 +60,9 @@
             this.Resolver_Button = new System.Windows.Forms.Button();
             this.Resolver_TextBox = new System.Windows.Forms.TextBox();
             this.Imei_Tab = new System.Windows.Forms.TabPage();
-            this.IMEI_button = new System.Windows.Forms.Button();
-            this.IMEI_input_tb = new System.Windows.Forms.TextBox();
             this.IMEI_output_tb = new System.Windows.Forms.TextBox();
+            this.IMEI_input_tb = new System.Windows.Forms.TextBox();
+            this.IMEI_button = new System.Windows.Forms.Button();
             this.Tab.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -382,15 +382,14 @@
             this.Imei_Tab.Text = "IMEI";
             this.Imei_Tab.UseVisualStyleBackColor = true;
             // 
-            // IMEI_button
+            // IMEI_output_tb
             // 
-            this.IMEI_button.Location = new System.Drawing.Point(864, 6);
-            this.IMEI_button.Name = "IMEI_button";
-            this.IMEI_button.Size = new System.Drawing.Size(188, 23);
-            this.IMEI_button.TabIndex = 0;
-            this.IMEI_button.Text = "Пуск";
-            this.IMEI_button.UseVisualStyleBackColor = true;
-            this.IMEI_button.Click += new System.EventHandler(this.IMEI_button_Click);
+            this.IMEI_output_tb.Location = new System.Drawing.Point(3, 32);
+            this.IMEI_output_tb.Multiline = true;
+            this.IMEI_output_tb.Name = "IMEI_output_tb";
+            this.IMEI_output_tb.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.IMEI_output_tb.Size = new System.Drawing.Size(1049, 544);
+            this.IMEI_output_tb.TabIndex = 2;
             // 
             // IMEI_input_tb
             // 
@@ -400,14 +399,15 @@
             this.IMEI_input_tb.TabIndex = 1;
             this.IMEI_input_tb.Text = "354869047125463";
             // 
-            // IMEI_output_tb
+            // IMEI_button
             // 
-            this.IMEI_output_tb.Location = new System.Drawing.Point(3, 32);
-            this.IMEI_output_tb.Multiline = true;
-            this.IMEI_output_tb.Name = "IMEI_output_tb";
-            this.IMEI_output_tb.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.IMEI_output_tb.Size = new System.Drawing.Size(1049, 544);
-            this.IMEI_output_tb.TabIndex = 2;
+            this.IMEI_button.Location = new System.Drawing.Point(864, 6);
+            this.IMEI_button.Name = "IMEI_button";
+            this.IMEI_button.Size = new System.Drawing.Size(188, 23);
+            this.IMEI_button.TabIndex = 0;
+            this.IMEI_button.Text = "Пуск";
+            this.IMEI_button.UseVisualStyleBackColor = true;
+            this.IMEI_button.Click += new System.EventHandler(this.IMEI_button_Click);
             // 
             // MainForm
             // 

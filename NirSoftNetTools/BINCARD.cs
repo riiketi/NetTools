@@ -18,8 +18,8 @@ namespace NirSoftNetTools
             WebResponse resp = req.GetResponse();
             Stream stream = resp.GetResponseStream();
             StreamReader sr = new StreamReader(stream);
-            string s = sr.ReadToEnd();
-            return s;
+
+            return sr.ReadToEnd();
         }
 
         public static string[] BankByBIN(string BIN)     // платёжная система, страна, банк

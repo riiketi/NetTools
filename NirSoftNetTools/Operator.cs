@@ -17,60 +17,55 @@ namespace NirSoftNetTools
             WebResponse resp = req.GetResponse();
             Stream stream = resp.GetResponseStream();
             StreamReader sr = new StreamReader(stream);
-            string s = sr.ReadToEnd();
-            return s;
+
+            return sr.ReadToEnd();
         }
+
         private static string LookupNotMobileNumber(string Number)  // 8 (код города) (номер)
         {
             WebRequest req = WebRequest.Create("https://www.kody.su/api/v2.1/search.xml?q=" + Number + "&key=90c8df3e97273dca8800f89261d3538e");
             WebResponse resp = req.GetResponse();
             Stream stream = resp.GetResponseStream();
             StreamReader sr = new StreamReader(stream);
-            string s = sr.ReadToEnd();
-            return s;
+
+            return sr.ReadToEnd();
         }
+
         public static string OpMobNUM(string Number)    // Оператор сотового номера (возвращает только оператор)
         {
-            string Result = "Ошибка";    // оператор
-            string Result_raw = "";
-            Result_raw += Number + "     " + LookupMobileNumber(Number) + "\n";
-            if (Result_raw.Contains("operator"))
-            {
-                int start_index = Result_raw.IndexOf(":") + 2;
-                int end_index = Result_raw.IndexOf('"', start_index);
-                int length = end_index - start_index;
-                Result = Result_raw.Substring(start_index, length);
+            string result = Number + "\t" + LookupMobileNumber(Number) + "\n";
+            if (result.Contains("operator")) {
+                int start_index = result.IndexOf(":") + 2;
+                int end_index   = result.IndexOf('"', start_index);
+                int length      = end_index - start_index;
+                return result.Substring(start_index, length);
             }
-            return Result;
+
+            return "Ошибка";
         }
+
         public static string OpMobNUM_raw(string Number)    // Оператор сотового номера (без обработки результата)
         {
-            string Result = "";
-            Result += Number + "     " + LookupMobileNumber(Number) + "\n";
-            return Result;
+            return Number + "\t" + LookupMobileNumber(Number) + "\n";
         }
         public static string OpNUM(string Number)   // Оператор стационарного номера (возвращает только оператор)
         {
-            string Result = "Ошибка";    // оператор
-            string Result_raw = "";
-            Result_raw += Number + "     " + LookupNotMobileNumber(Number) + "\n";
+            string result = Number + "\t" + LookupNotMobileNumber(Number) + "\n";
             
-            if (Result_raw.Contains("operator"))
-            {
-                int ind = Result_raw.IndexOf("operator");
-                int start_index = Result_raw.IndexOf(">", ind) + 1;
-                int end_index = Result_raw.IndexOf('<', start_index);
-                int length = end_index - start_index;
-                Result = Result_raw.Substring(start_index, length);
-            }
-            return Result;
+            if (result.Contains("operator")) {
+                int ind         = result.IndexOf("operator");
+                int start_index = result.IndexOf(">", ind) + 1;
+                int end_index   = result.IndexOf('<', start_index);
+
+                return  result.Substring(start_index, end_index - start_index);
+            } 
+
+            return "Ошибка";
         }
-        public static string[] OpNUM_raw(string Number)   // Оператор стационарного номера (без обработки результата)
+
+        public static string OpNUM_raw(string Number)   // Оператор стационарного номера (без обработки результата)
         {
-            string[] Result = new string[2];
-            string Result1 = "";
-            Result1 += Number + "     " + LookupNotMobileNumber(Number) + "\n";
-            return Result;
+            return Number + "\t" + LookupNotMobileNumber(Number) + "\n";
         }
     }
 }

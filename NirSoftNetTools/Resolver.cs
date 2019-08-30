@@ -17,17 +17,20 @@ namespace NirSoftNetTools
 
         public static string IPToDomain(string IP)
         {
-            return Dns.GetHostEntry(IP).HostName;
+            try {
+                return Dns.GetHostEntry(IP).HostName;
+            }
+            catch (Exception e) {
+                return string.Empty;
+            }
         }
 
         public static string IPToDomain(IPAddress IP)
         {
-            try
-            {
+            try {
                 return Dns.GetHostEntry(IP).HostName;
             }
-            catch (Exception e)
-            {
+            catch (Exception e) {
                 return string.Empty;
             }
         }
