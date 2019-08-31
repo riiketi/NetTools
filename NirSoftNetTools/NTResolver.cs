@@ -8,7 +8,7 @@ using System.Net;
 
 namespace NirSoftNetTools
 {
-    static class Resolver
+    static class NTResolver
     {
         public static IPAddress[] DomainToIP(string hostname)
         {

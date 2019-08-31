@@ -4,31 +4,32 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using System.Windows.Forms;
 
 namespace NirSoftNetTools
 {
     class VendorIMEI
     {
-        public static string Lookup(string imei)
+        const int IMEILength = 8; 
+        public static string[] Lookup(string IMEI)
         {
-            string Result = "";
-            string tac = imei.Substring(0, 8);
-
-            string str = Properties.Resources.imeidb1;
-            int ind1 = str.IndexOf(tac) + 9; // 8 - длина tac номера + запятая
-            int ind2 = str.IndexOf(",", ind1);
-            Result = str.Substring(ind1, (ind2 - ind1));
-
-            if (String.IsNullOrEmpty(Result)) {
-                str = Properties.Resources.imeidb2;
-                ind1 = str.IndexOf(tac) + 9; // 8 - длина tac номера + запятая
-                ind2 = str.IndexOf(",", ind1);
-                Result = str.Substring(ind1, (ind2 - ind1));
-                if (String.IsNullOrEmpty(Result)) {
-                    Result = "Данный IMEI не найден";
+            MessageBox.Show("foreach");
+            try {
+                MessageBox.Show("foreach");
+                DirectoryInfo dir = new DirectoryInfo(@"data\imei\");
+                foreach (var item in dir.GetFiles()) {
+                    MessageBox.Show("foreach");
+                    CSVParser parser = new CSVParser(@"data\imei\" + item.Name);
+                    string[] buff;
+                    while ((buff = parser.ReadLine()) != null) {
+                        if (buff[0].Equals(IMEI)) {
+                            return buff;
+                        }
+                    }
                 }
             }
-            return Result;
+            catch (Exception e) { }
+            return null;
         }
     }
 }

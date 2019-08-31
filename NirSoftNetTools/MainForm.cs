@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net;
 using Division42.NetworkTools;
 
 namespace NirSoftNetTools
@@ -79,12 +80,41 @@ namespace NirSoftNetTools
 
         private void Resolver_Button_Click(object sender, EventArgs e)
         {
-            string data = Resolver_TextBox.Text;
+            string data = Resolver_InputTB.Text;
+
+            string[] buffer = new string[Resolver_listView.Columns.Count];
+
+            IPAddress ip;
+            if (IPAddress.TryParse(data, out ip)) {
+                string domain = NTResolver.IPToDomain(ip);
+                buffer[0] = ip.ToString();
+                buffer[1] = data;
+                Resolver_listView.Items.Add(new ListViewItem(buffer));
+            }
+            else {
+                IPAddress[] list = NTResolver.DomainToIP(data);
+                foreach (var item in list) {
+                    buffer[0] = item.ToString();
+                    buffer[1] = data;
+                    Resolver_listView.Items.Add(new ListViewItem(buffer));
+                }
+            }
+            /*
+            string[] buffer = new string[TR_ListView.Columns.Count];
+            foreach (var info in TraceRoute.GetTraceRoute(TR_InputTextBox.Text))
+            {
+                buffer[0] = counter++.ToString();
+                buffer[1] = info.ElapsedTime.ToString();
+                buffer[2] = info.IP.ToString();
+                buffer[3] = info.Domain.ToString();
+                TR_ListView.Items.Add(new ListViewItem(VendorIMEI.Lookup(IMEI_input_tb.Text)));
+            }
+            */
         }
 
         private void IMEI_button_Click(object sender, EventArgs e)
         {
-            IMEI_output_tb.Text = VendorIMEI.Lookup(IMEI_input_tb.Text);
+            IMEI_ListView.Items.Add(new ListViewItem(VendorIMEI.Lookup(IMEI_input_tb.Text)));
         }
     }
 }

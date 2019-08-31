@@ -55,13 +55,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BINCARD.cs" />
+    <Compile Include="CSVParser.cs" />
     <Compile Include="Operator.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Resolver.cs" />
+    <Compile Include="NTResolver.cs" />
     <Compile Include="VendorMAC.cs" />
     <Compile Include="TraceRoute.cs" />
     <Compile Include="VendorIMEI.cs" />
@@ -82,8 +83,8 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="imeidb1.csv" />
-    <None Include="imeidb2.csv" />
+    <None Include="data\imei\imeidb1.csv" />
+    <None Include="data\imei\imeidb2.csv" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

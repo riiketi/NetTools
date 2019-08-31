@@ -60,14 +60,14 @@ namespace NirSoftNetTools
                 switch (reply.Status)
                 {
                     case IPStatus.TtlExpired:
-                        yield return new RouteInfo(stopWatch.ElapsedMilliseconds, reply.Address, Resolver.IPToDomain(reply.Address));
+                        yield return new RouteInfo(stopWatch.ElapsedMilliseconds, reply.Address, NTResolver.IPToDomain(reply.Address));
                         continue;
 
                     case IPStatus.TimedOut:
                         continue;
 
                     case IPStatus.Success:
-                        yield return new RouteInfo(stopWatch.ElapsedMilliseconds, reply.Address, Resolver.IPToDomain(reply.Address));
+                        yield return new RouteInfo(stopWatch.ElapsedMilliseconds, reply.Address, NTResolver.IPToDomain(reply.Address));
                         break;
                 }
 
