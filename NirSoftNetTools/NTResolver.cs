@@ -12,7 +12,13 @@ namespace NirSoftNetTools
     {
         public static IPAddress[] DomainToIP(string hostname)
         {
-            return Dns.GetHostAddresses(hostname);
+            try { 
+                return Dns.GetHostAddresses(hostname);
+            } 
+            catch (Exception e) {
+                return null;
+            }
+
         }
 
         public static string IPToDomain(string IP)
@@ -21,7 +27,7 @@ namespace NirSoftNetTools
                 return Dns.GetHostEntry(IP).HostName;
             }
             catch (Exception e) {
-                return string.Empty;
+                return null;
             }
         }
 
@@ -31,7 +37,7 @@ namespace NirSoftNetTools
                 return Dns.GetHostEntry(IP).HostName;
             }
             catch (Exception e) {
-                return string.Empty;
+                return null;
             }
         }
     }

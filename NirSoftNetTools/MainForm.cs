@@ -75,7 +75,7 @@ namespace NirSoftNetTools
         private void Button6_Click(object sender, EventArgs e)
         {
             string Number = textBox5.Text;
-            textBox6.Text = Operator.OpNUM(Number); // test
+            textBox6.Text = Operator.OpNUM(Number);
         }
 
         private void Resolver_Button_Click(object sender, EventArgs e)
@@ -94,27 +94,20 @@ namespace NirSoftNetTools
             else {
                 IPAddress[] list = NTResolver.DomainToIP(data);
                 foreach (var item in list) {
-                    buffer[0] = item.ToString();
-                    buffer[1] = data;
+                    buffer[0] = data;
+                    buffer[1] = item.ToString();
                     Resolver_listView.Items.Add(new ListViewItem(buffer));
                 }
             }
-            /*
-            string[] buffer = new string[TR_ListView.Columns.Count];
-            foreach (var info in TraceRoute.GetTraceRoute(TR_InputTextBox.Text))
-            {
-                buffer[0] = counter++.ToString();
-                buffer[1] = info.ElapsedTime.ToString();
-                buffer[2] = info.IP.ToString();
-                buffer[3] = info.Domain.ToString();
-                TR_ListView.Items.Add(new ListViewItem(VendorIMEI.Lookup(IMEI_input_tb.Text)));
-            }
-            */
         }
 
         private void IMEI_button_Click(object sender, EventArgs e)
         {
-            IMEI_ListView.Items.Add(new ListViewItem(VendorIMEI.Lookup(IMEI_input_tb.Text)));
+            string[] result = VendorIMEI.Lookup(IMEI_input_tb.Text);
+            if (result != null)
+                IMEI_ListView.Items.Add(new ListViewItem(result));
+            else
+                MessageBox.Show("IMEI не найден.");
         }
     }
 }
