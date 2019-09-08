@@ -57,18 +57,18 @@
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
             this.Resolver = new System.Windows.Forms.TabPage();
+            this.Resolver_listView = new System.Windows.Forms.ListView();
+            this.HostName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.IP = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Resolver_Button = new System.Windows.Forms.Button();
             this.Resolver_InputTB = new System.Windows.Forms.TextBox();
             this.Imei_Tab = new System.Windows.Forms.TabPage();
-            this.IMEI_input_tb = new System.Windows.Forms.TextBox();
-            this.IMEI_button = new System.Windows.Forms.Button();
-            this.Resolver_listView = new System.Windows.Forms.ListView();
-            this.IP = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.HostName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.IMEI_ListView = new System.Windows.Forms.ListView();
             this.IMEI = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Vendor = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Model = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.IMEI_input_tb = new System.Windows.Forms.TextBox();
+            this.IMEI_button = new System.Windows.Forms.Button();
             this.Tab.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -115,7 +115,7 @@
             this.Whois_button.Name = "Whois_button";
             this.Whois_button.Size = new System.Drawing.Size(75, 21);
             this.Whois_button.TabIndex = 6;
-            this.Whois_button.Text = "Добавить";
+            this.Whois_button.Text = "Старт";
             this.Whois_button.UseVisualStyleBackColor = true;
             this.Whois_button.Click += new System.EventHandler(this.Button1_Click_1);
             // 
@@ -253,7 +253,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 0;
-            this.button3.Text = "button3";
+            this.button3.Text = "Старт";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.Button3_Click);
             // 
@@ -359,6 +359,30 @@
             this.Resolver.Text = "Resolver";
             this.Resolver.UseVisualStyleBackColor = true;
             // 
+            // Resolver_listView
+            // 
+            this.Resolver_listView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.HostName,
+            this.IP});
+            this.Resolver_listView.Location = new System.Drawing.Point(6, 35);
+            this.Resolver_listView.Name = "Resolver_listView";
+            this.Resolver_listView.Size = new System.Drawing.Size(1046, 541);
+            this.Resolver_listView.TabIndex = 4;
+            this.Resolver_listView.UseCompatibleStateImageBehavior = false;
+            this.Resolver_listView.View = System.Windows.Forms.View.Details;
+            // 
+            // HostName
+            // 
+            this.HostName.DisplayIndex = 1;
+            this.HostName.Text = "Host Name";
+            this.HostName.Width = 816;
+            // 
+            // IP
+            // 
+            this.IP.DisplayIndex = 0;
+            this.IP.Text = "IP";
+            this.IP.Width = 216;
+            // 
             // Resolver_Button
             // 
             this.Resolver_Button.Location = new System.Drawing.Point(198, 6);
@@ -389,48 +413,6 @@
             this.Imei_Tab.Text = "IMEI";
             this.Imei_Tab.UseVisualStyleBackColor = true;
             // 
-            // IMEI_input_tb
-            // 
-            this.IMEI_input_tb.Location = new System.Drawing.Point(6, 6);
-            this.IMEI_input_tb.Name = "IMEI_input_tb";
-            this.IMEI_input_tb.Size = new System.Drawing.Size(852, 20);
-            this.IMEI_input_tb.TabIndex = 1;
-            this.IMEI_input_tb.Text = "35622703";
-            // 
-            // IMEI_button
-            // 
-            this.IMEI_button.Location = new System.Drawing.Point(864, 6);
-            this.IMEI_button.Name = "IMEI_button";
-            this.IMEI_button.Size = new System.Drawing.Size(188, 23);
-            this.IMEI_button.TabIndex = 0;
-            this.IMEI_button.Text = "Пуск";
-            this.IMEI_button.UseVisualStyleBackColor = true;
-            this.IMEI_button.Click += new System.EventHandler(this.IMEI_button_Click);
-            // 
-            // Resolver_listView
-            // 
-            this.Resolver_listView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.HostName,
-            this.IP});
-            this.Resolver_listView.Location = new System.Drawing.Point(6, 35);
-            this.Resolver_listView.Name = "Resolver_listView";
-            this.Resolver_listView.Size = new System.Drawing.Size(1046, 541);
-            this.Resolver_listView.TabIndex = 4;
-            this.Resolver_listView.UseCompatibleStateImageBehavior = false;
-            this.Resolver_listView.View = System.Windows.Forms.View.Details;
-            // 
-            // IP
-            // 
-            this.IP.DisplayIndex = 0;
-            this.IP.Text = "IP";
-            this.IP.Width = 216;
-            // 
-            // HostName
-            // 
-            this.HostName.DisplayIndex = 1;
-            this.HostName.Text = "Host Name";
-            this.HostName.Width = 816;
-            // 
             // IMEI_ListView
             // 
             this.IMEI_ListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -458,6 +440,24 @@
             // 
             this.Model.Text = "Model";
             this.Model.Width = 174;
+            // 
+            // IMEI_input_tb
+            // 
+            this.IMEI_input_tb.Location = new System.Drawing.Point(6, 6);
+            this.IMEI_input_tb.Name = "IMEI_input_tb";
+            this.IMEI_input_tb.Size = new System.Drawing.Size(852, 20);
+            this.IMEI_input_tb.TabIndex = 1;
+            this.IMEI_input_tb.Text = "35622703";
+            // 
+            // IMEI_button
+            // 
+            this.IMEI_button.Location = new System.Drawing.Point(864, 6);
+            this.IMEI_button.Name = "IMEI_button";
+            this.IMEI_button.Size = new System.Drawing.Size(188, 23);
+            this.IMEI_button.TabIndex = 0;
+            this.IMEI_button.Text = "Пуск";
+            this.IMEI_button.UseVisualStyleBackColor = true;
+            this.IMEI_button.Click += new System.EventHandler(this.IMEI_button_Click);
             // 
             // MainForm
             // 
