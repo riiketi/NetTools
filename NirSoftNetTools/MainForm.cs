@@ -45,7 +45,7 @@ namespace NirSoftNetTools
                 buffer[0] = counter++.ToString();
                 buffer[1] = info.ElapsedTime.ToString();
                 buffer[2] = info.IP.ToString();
-                buffer[3] = info.Domain.ToString();
+               
                 TR_ListView.Items.Add(new ListViewItem(buffer));
             }
         }

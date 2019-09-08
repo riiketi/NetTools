@@ -468,7 +468,7 @@
             this.Controls.Add(this.Tab);
             this.MaximizeBox = false;
             this.Name = "MainForm";
-            this.Text = "Form1";
+            this.Text = "NetTools";
             this.Tab.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
